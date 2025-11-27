@@ -1,14 +1,15 @@
-X = int(input())
-Y = int(input())
+x = int(input())
+y = int(input())
 
-
-inicio = min(X, Y)
-fim = max(X, Y)
+if x > y:
+    x, y = y, x
 
 soma = 0
+n = x
 
-for i in range(inicio, fim + 1):  
-    if i % 13 != 0:                
-        soma += i
+while n <= y:
+    if n % 13 != 0:
+        soma += n
+    n += 1
 
 print(soma)
